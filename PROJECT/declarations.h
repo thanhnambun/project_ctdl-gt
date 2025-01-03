@@ -1,0 +1,1 @@
+int tong(int , int);
