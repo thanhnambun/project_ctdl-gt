@@ -4,8 +4,8 @@
 CPP      = g++.exe -D__DEBUG__
 CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = main.o test.o
-LINKOBJ  = main.o test.o
+OBJ      = main.o create_order.o initialize_queue.o is_queue_empty.o enqueue.o dequeue.o display_queue.o cancel_order.o save_to_file.o load_from_file.o add_order.o process_order.o cancel_order_by_id.o
+LINKOBJ  = main.o create_order.o initialize_queue.o is_queue_empty.o enqueue.o dequeue.o display_queue.o cancel_order.o save_to_file.o load_from_file.o add_order.o process_order.o cancel_order_by_id.o
 LIBS     = -L"C:/Users/nambu/Dev-Cpp/MinGW64/lib" -L"C:/Users/nambu/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
 INCS     = -I"C:/Users/nambu/Dev-Cpp/MinGW64/include" -I"C:/Users/nambu/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/nambu/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Users/nambu/Dev-Cpp/MinGW64/include" -I"C:/Users/nambu/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/nambu/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/nambu/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -27,5 +27,38 @@ $(BIN): $(OBJ)
 main.o: main.c
 	$(CC) -c main.c -o main.o $(CFLAGS)
 
-test.o: test.c
-	$(CC) -c test.c -o test.o $(CFLAGS)
+create_order.o: create_order.c
+	$(CC) -c create_order.c -o create_order.o $(CFLAGS)
+
+initialize_queue.o: initialize_queue.c
+	$(CC) -c initialize_queue.c -o initialize_queue.o $(CFLAGS)
+
+is_queue_empty.o: is_queue_empty.c
+	$(CC) -c is_queue_empty.c -o is_queue_empty.o $(CFLAGS)
+
+enqueue.o: enqueue.c
+	$(CC) -c enqueue.c -o enqueue.o $(CFLAGS)
+
+dequeue.o: dequeue.c
+	$(CC) -c dequeue.c -o dequeue.o $(CFLAGS)
+
+display_queue.o: display_queue.c
+	$(CC) -c display_queue.c -o display_queue.o $(CFLAGS)
+
+cancel_order.o: cancel_order.c
+	$(CC) -c cancel_order.c -o cancel_order.o $(CFLAGS)
+
+save_to_file.o: save_to_file.c
+	$(CC) -c save_to_file.c -o save_to_file.o $(CFLAGS)
+
+load_from_file.o: load_from_file.c
+	$(CC) -c load_from_file.c -o load_from_file.o $(CFLAGS)
+
+add_order.o: add_order.c
+	$(CC) -c add_order.c -o add_order.o $(CFLAGS)
+
+process_order.o: process_order.c
+	$(CC) -c process_order.c -o process_order.o $(CFLAGS)
+
+cancel_order_by_id.o: cancel_order_by_id.c
+	$(CC) -c cancel_order_by_id.c -o cancel_order_by_id.o $(CFLAGS)
